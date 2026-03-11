@@ -4,7 +4,7 @@ function confirmar() {
     let idade = Number(document.getElementById("idade").value)
     let btn = document.getElementById("btn")
 
-    if (nome && idade > 18 && idade < 60) {
+    if (nome && idade >= 18 && idade <= 60) {
 
         btn.style.visibility = "visible"
         alert("Dados Confirmados !!")
@@ -13,7 +13,7 @@ function confirmar() {
 
         alert("Preenche seus Dados Completos PORFAVOR!")
 
-    } else if (idade > 60) {
+    } else if (idade >= 60) {
 
         alert("Coloque seus Dados Verdadeiros Por favor")
 

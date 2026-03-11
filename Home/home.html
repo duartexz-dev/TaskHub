@@ -28,7 +28,7 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#planos">Planos</a>
+                        <a class="nav-link" href="Module-planos/">Planos</a>
                     </li>
 
                     <li class="nav-item">
@@ -90,7 +90,7 @@
 
     <div class="task-calendar">
 
-        <h2 class="title">Aqui você pode criar tarefas!</h2>
+        <h2 class="title">Plano semanal!</h2>
         <details class="task-create glass slide-top">
 
             <summary class="summary-btn">
@@ -162,24 +162,25 @@
 
         </details>
 
+
+
+
+
         <div class="calendar">
 
-            <div class="header">
-
-                <div>Hora</div>
-                <div>Seg</div>
-                <div>Ter</div>
-                <div>Qua</div>
-                <div>Qui</div>
-                <div>Sex</div>
-                <div>Sab</div>
-                <div>Dom</div>
-
+            <div class="header d-flex flex-nowrap text-center">
+                <div class="header-cell flex-shrink-0">Hora</div>
+                <div class="header-cell flex-shrink-0">Seg</div>
+                <div class="header-cell flex-shrink-0">Ter</div>
+                <div class="header-cell flex-shrink-0">Qua</div>
+                <div class="header-cell flex-shrink-0">Qui</div>
+                <div class="header-cell flex-shrink-0">Sex</div>
+                <div class="header-cell flex-shrink-0">Sab</div>
+                <div class="header-cell flex-shrink-0">Dom</div>
             </div>
 
-
             <div class="grid">
-
+                <!-- 04:00 até 12:00 -->
                 <div class="hour">04:00</div>
                 <div class="cell" id="seg-04"></div>
                 <div class="cell" id="ter-04"></div>
@@ -188,7 +189,6 @@
                 <div class="cell" id="sex-04"></div>
                 <div class="cell" id="sab-04"></div>
                 <div class="cell" id="dom-04"></div>
-
 
                 <div class="hour">05:00</div>
                 <div class="cell" id="seg-05"></div>
@@ -199,7 +199,6 @@
                 <div class="cell" id="sab-05"></div>
                 <div class="cell" id="dom-05"></div>
 
-
                 <div class="hour">06:00</div>
                 <div class="cell" id="seg-06"></div>
                 <div class="cell" id="ter-06"></div>
@@ -208,7 +207,6 @@
                 <div class="cell" id="sex-06"></div>
                 <div class="cell" id="sab-06"></div>
                 <div class="cell" id="dom-06"></div>
-
 
                 <div class="hour">07:00</div>
                 <div class="cell" id="seg-07"></div>
@@ -219,7 +217,6 @@
                 <div class="cell" id="sab-07"></div>
                 <div class="cell" id="dom-07"></div>
 
-
                 <div class="hour">08:00</div>
                 <div class="cell" id="seg-08"></div>
                 <div class="cell" id="ter-08"></div>
@@ -228,7 +225,6 @@
                 <div class="cell" id="sex-08"></div>
                 <div class="cell" id="sab-08"></div>
                 <div class="cell" id="dom-08"></div>
-
 
                 <div class="hour">09:00</div>
                 <div class="cell" id="seg-09"></div>
@@ -239,7 +235,6 @@
                 <div class="cell" id="sab-09"></div>
                 <div class="cell" id="dom-09"></div>
 
-
                 <div class="hour">10:00</div>
                 <div class="cell" id="seg-10"></div>
                 <div class="cell" id="ter-10"></div>
@@ -248,7 +243,6 @@
                 <div class="cell" id="sex-10"></div>
                 <div class="cell" id="sab-10"></div>
                 <div class="cell" id="dom-10"></div>
-
 
                 <div class="hour">11:00</div>
                 <div class="cell" id="seg-11"></div>
@@ -259,7 +253,6 @@
                 <div class="cell" id="sab-11"></div>
                 <div class="cell" id="dom-11"></div>
 
-
                 <div class="hour">12:00</div>
                 <div class="cell" id="seg-12"></div>
                 <div class="cell" id="ter-12"></div>
@@ -268,22 +261,13 @@
                 <div class="cell" id="sex-12"></div>
                 <div class="cell" id="sab-12"></div>
                 <div class="cell" id="dom-12"></div>
-
             </div>
 
-
-            <button id="Open" class="calendar-btn" onclick="Abrir()">
-                Mostrar mais horários
-            </button>
-
-
-            <button id="Ocult" class="calendar-btn" onclick="ocultar()">
-                Mostrar menos horários
-            </button>
-
+            <button id="Open" class="calendar-btn" onclick="Abrir()">Mostrar mais horários</button>
+            <button id="Ocult" class="calendar-btn" onclick="ocultar()">Mostrar menos horários</button>
 
             <div class="grid hidden-hours" id="cardOcultar">
-
+                <!-- 13:00 até 00:00 -->
                 <div class="hour">13:00</div>
                 <div class="cell" id="seg-13"></div>
                 <div class="cell" id="ter-13"></div>
@@ -292,7 +276,6 @@
                 <div class="cell" id="sex-13"></div>
                 <div class="cell" id="sab-13"></div>
                 <div class="cell" id="dom-13"></div>
-
 
                 <div class="hour">14:00</div>
                 <div class="cell" id="seg-14"></div>
@@ -303,7 +286,6 @@
                 <div class="cell" id="sab-14"></div>
                 <div class="cell" id="dom-14"></div>
 
-
                 <div class="hour">15:00</div>
                 <div class="cell" id="seg-15"></div>
                 <div class="cell" id="ter-15"></div>
@@ -312,7 +294,6 @@
                 <div class="cell" id="sex-15"></div>
                 <div class="cell" id="sab-15"></div>
                 <div class="cell" id="dom-15"></div>
-
 
                 <div class="hour">16:00</div>
                 <div class="cell" id="seg-16"></div>
@@ -323,7 +304,6 @@
                 <div class="cell" id="sab-16"></div>
                 <div class="cell" id="dom-16"></div>
 
-
                 <div class="hour">17:00</div>
                 <div class="cell" id="seg-17"></div>
                 <div class="cell" id="ter-17"></div>
@@ -332,7 +312,6 @@
                 <div class="cell" id="sex-17"></div>
                 <div class="cell" id="sab-17"></div>
                 <div class="cell" id="dom-17"></div>
-
 
                 <div class="hour">18:00</div>
                 <div class="cell" id="seg-18"></div>
@@ -343,7 +322,6 @@
                 <div class="cell" id="sab-18"></div>
                 <div class="cell" id="dom-18"></div>
 
-
                 <div class="hour">19:00</div>
                 <div class="cell" id="seg-19"></div>
                 <div class="cell" id="ter-19"></div>
@@ -352,7 +330,6 @@
                 <div class="cell" id="sex-19"></div>
                 <div class="cell" id="sab-19"></div>
                 <div class="cell" id="dom-19"></div>
-
 
                 <div class="hour">20:00</div>
                 <div class="cell" id="seg-20"></div>
@@ -363,7 +340,6 @@
                 <div class="cell" id="sab-20"></div>
                 <div class="cell" id="dom-20"></div>
 
-
                 <div class="hour">21:00</div>
                 <div class="cell" id="seg-21"></div>
                 <div class="cell" id="ter-21"></div>
@@ -372,7 +348,6 @@
                 <div class="cell" id="sex-21"></div>
                 <div class="cell" id="sab-21"></div>
                 <div class="cell" id="dom-21"></div>
-
 
                 <div class="hour">22:00</div>
                 <div class="cell" id="seg-22"></div>
@@ -383,7 +358,6 @@
                 <div class="cell" id="sab-22"></div>
                 <div class="cell" id="dom-22"></div>
 
-
                 <div class="hour">23:00</div>
                 <div class="cell" id="seg-23"></div>
                 <div class="cell" id="ter-23"></div>
@@ -393,7 +367,6 @@
                 <div class="cell" id="sab-23"></div>
                 <div class="cell" id="dom-23"></div>
 
-
                 <div class="hour">00:00</div>
                 <div class="cell" id="seg-00"></div>
                 <div class="cell" id="ter-00"></div>
@@ -402,15 +375,91 @@
                 <div class="cell" id="sex-00"></div>
                 <div class="cell" id="sab-00"></div>
                 <div class="cell" id="dom-00"></div>
-
             </div>
 
         </div>
-    </div>
-    <script src="home.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+        <style>
+            /* CONTAINER DO CALENDARIO */
+            .calendar {
+                width: 100%;
+                overflow-x: auto;
+                padding: 10px;
+            }
+
+            /* HEADER */
+            .header {
+                min-width: 720px;
+            }
+
+            .header-cell {
+                min-width: 90px;
+                padding: 10px;
+                font-weight: bold;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                background: rgba(255, 255, 255, 0.08);
+            }
+
+            /* GRID */
+            .grid {
+                display: grid;
+                grid-template-columns: 90px repeat(7, 90px);
+                gap: 4px;
+                min-width: 720px;
+            }
+
+            /* HORAS */
+            .hour {
+                text-align: center;
+                font-weight: bold;
+                padding: 8px;
+                border-radius: 6px;
+                background: rgba(120, 150, 255, 0.25);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            /* CELULAS */
+            .cell {
+                height: 55px;
+                border-radius: 6px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                background: rgba(255, 255, 255, 0.05);
+                transition: 0.25s;
+            }
+
+            .cell:hover {
+                background: rgba(255, 255, 255, 0.15);
+            }
+
+            /* BOTÕES */
+            .calendar-btn {
+                margin-top: 10px;
+            }
+
+            /* SCROLL BONITO */
+            .calendar::-webkit-scrollbar {
+                height: 6px;
+            }
+
+            .calendar::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.4);
+                border-radius: 10px;
+            }
+        </style>
+
+
+        <script src="home.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
