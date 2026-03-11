@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <title>TaskHub</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-primary-custom">
+        <div class="container-fluid">
+
+            <h1 class="title">TaskHub</h1>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planos">Planos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Progresso</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Perfil</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4">
+
+            <div class="card bg-primary-custom text-white" style="width: 18rem;">
+                <img src="../images/img-runner.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        Planos completos cabem em vidas completas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card bg-primary-custom text-white" style="width: 18rem;">
+
+                <div id="planos" class="card-header">
+                    📋 Planos
+                </div>
+
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item bg-primary-custom text-white">
+                        📅 Semanal
+                    </li>
+
+                    <li class="list-group-item bg-primary-custom text-white">
+                        🗓️ Mensal
+                    </li>
+
+                    <li class="list-group-item bg-primary-custom text-white">
+                        🏆 Anual
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="task-calendar">
+
+        <h2 class="title">Aqui você pode criar tarefas!</h2>
+        <details class="task-create glass slide-top">
+
+            <summary class="summary-btn">
+                Criar nova tarefa
+            </summary>
+
+            <div class="task-form">
+
+                <!-- NOME -->
+
+                <div class="form-group slide-left">
+
+                    <label class="calendar-label">
+                        Nome da tarefa
+                    </label>
+
+                    <input type="text" id="taskName" class="calendar-input" placeholder="Ex: Estudar JavaScript" />
+
+                    <small class="input-help">
+                        Digite o nome da tarefa que aparecerá no calendário.
+                    </small>
+
+                </div>
+
+
+                <!-- DIA -->
+
+                <div class="form-group slide-right">
+
+                    <label class="calendar-label">
+                        Dia da semana
+                    </label>
+
+                    <input type="text" id="taskDay" class="calendar-input" placeholder="Ex: segunda-feira" />
+
+                    <small class="input-help">
+                        Digite o dia completo: segunda-feira, terça-feira, etc.
+                    </small>
+
+                </div>
+
+
+                <!-- HORÁRIO -->
+
+                <div class="form-group slide-left">
+
+                    <label class="calendar-label">
+                        Horário da tarefa
+                    </label>
+
+                    <input type="time" id="taskHour" class="calendar-input" min="04:00" max="23:59" step="3600" />
+
+                    <small class="input-help">
+                        Escolha o horário em que a tarefa deve aparecer no calendário.
+                    </small>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <button class="calendar-btn big-btn slide-bottom" id="confirmTask" onclick="confirmtask()">
+
+                    Confirmar tarefa
+
+                </button>
+
+            </div>
+
+        </details>
+
+        <div class="calendar">
+
+            <div class="header">
+
+                <div>Hora</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sab</div>
+                <div>Dom</div>
+
+            </div>
+
+
+            <div class="grid">
+
+                <div class="hour">04:00</div>
+                <div class="cell" id="seg-04"></div>
+                <div class="cell" id="ter-04"></div>
+                <div class="cell" id="qua-04"></div>
+                <div class="cell" id="qui-04"></div>
+                <div class="cell" id="sex-04"></div>
+                <div class="cell" id="sab-04"></div>
+                <div class="cell" id="dom-04"></div>
+
+
+                <div class="hour">05:00</div>
+                <div class="cell" id="seg-05"></div>
+                <div class="cell" id="ter-05"></div>
+                <div class="cell" id="qua-05"></div>
+                <div class="cell" id="qui-05"></div>
+                <div class="cell" id="sex-05"></div>
+                <div class="cell" id="sab-05"></div>
+                <div class="cell" id="dom-05"></div>
+
+
+                <div class="hour">06:00</div>
+                <div class="cell" id="seg-06"></div>
+                <div class="cell" id="ter-06"></div>
+                <div class="cell" id="qua-06"></div>
+                <div class="cell" id="qui-06"></div>
+                <div class="cell" id="sex-06"></div>
+                <div class="cell" id="sab-06"></div>
+                <div class="cell" id="dom-06"></div>
+
+
+                <div class="hour">07:00</div>
+                <div class="cell" id="seg-07"></div>
+                <div class="cell" id="ter-07"></div>
+                <div class="cell" id="qua-07"></div>
+                <div class="cell" id="qui-07"></div>
+                <div class="cell" id="sex-07"></div>
+                <div class="cell" id="sab-07"></div>
+                <div class="cell" id="dom-07"></div>
+
+
+                <div class="hour">08:00</div>
+                <div class="cell" id="seg-08"></div>
+                <div class="cell" id="ter-08"></div>
+                <div class="cell" id="qua-08"></div>
+                <div class="cell" id="qui-08"></div>
+                <div class="cell" id="sex-08"></div>
+                <div class="cell" id="sab-08"></div>
+                <div class="cell" id="dom-08"></div>
+
+
+                <div class="hour">09:00</div>
+                <div class="cell" id="seg-09"></div>
+                <div class="cell" id="ter-09"></div>
+                <div class="cell" id="qua-09"></div>
+                <div class="cell" id="qui-09"></div>
+                <div class="cell" id="sex-09"></div>
+                <div class="cell" id="sab-09"></div>
+                <div class="cell" id="dom-09"></div>
+
+
+                <div class="hour">10:00</div>
+                <div class="cell" id="seg-10"></div>
+                <div class="cell" id="ter-10"></div>
+                <div class="cell" id="qua-10"></div>
+                <div class="cell" id="qui-10"></div>
+                <div class="cell" id="sex-10"></div>
+                <div class="cell" id="sab-10"></div>
+                <div class="cell" id="dom-10"></div>
+
+
+                <div class="hour">11:00</div>
+                <div class="cell" id="seg-11"></div>
+                <div class="cell" id="ter-11"></div>
+                <div class="cell" id="qua-11"></div>
+                <div class="cell" id="qui-11"></div>
+                <div class="cell" id="sex-11"></div>
+                <div class="cell" id="sab-11"></div>
+                <div class="cell" id="dom-11"></div>
+
+
+                <div class="hour">12:00</div>
+                <div class="cell" id="seg-12"></div>
+                <div class="cell" id="ter-12"></div>
+                <div class="cell" id="qua-12"></div>
+                <div class="cell" id="qui-12"></div>
+                <div class="cell" id="sex-12"></div>
+                <div class="cell" id="sab-12"></div>
+                <div class="cell" id="dom-12"></div>
+
+            </div>
+
+
+            <button id="Open" class="calendar-btn" onclick="Abrir()">
+                Mostrar mais horários
+            </button>
+
+
+            <button id="Ocult" class="calendar-btn" onclick="ocultar()">
+                Mostrar menos horários
+            </button>
+
+
+            <div class="grid hidden-hours" id="cardOcultar">
+
+                <div class="hour">13:00</div>
+                <div class="cell" id="seg-13"></div>
+                <div class="cell" id="ter-13"></div>
+                <div class="cell" id="qua-13"></div>
+                <div class="cell" id="qui-13"></div>
+                <div class="cell" id="sex-13"></div>
+                <div class="cell" id="sab-13"></div>
+                <div class="cell" id="dom-13"></div>
+
+
+                <div class="hour">14:00</div>
+                <div class="cell" id="seg-14"></div>
+                <div class="cell" id="ter-14"></div>
+                <div class="cell" id="qua-14"></div>
+                <div class="cell" id="qui-14"></div>
+                <div class="cell" id="sex-14"></div>
+                <div class="cell" id="sab-14"></div>
+                <div class="cell" id="dom-14"></div>
+
+
+                <div class="hour">15:00</div>
+                <div class="cell" id="seg-15"></div>
+                <div class="cell" id="ter-15"></div>
+                <div class="cell" id="qua-15"></div>
+                <div class="cell" id="qui-15"></div>
+                <div class="cell" id="sex-15"></div>
+                <div class="cell" id="sab-15"></div>
+                <div class="cell" id="dom-15"></div>
+
+
+                <div class="hour">16:00</div>
+                <div class="cell" id="seg-16"></div>
+                <div class="cell" id="ter-16"></div>
+                <div class="cell" id="qua-16"></div>
+                <div class="cell" id="qui-16"></div>
+                <div class="cell" id="sex-16"></div>
+                <div class="cell" id="sab-16"></div>
+                <div class="cell" id="dom-16"></div>
+
+
+                <div class="hour">17:00</div>
+                <div class="cell" id="seg-17"></div>
+                <div class="cell" id="ter-17"></div>
+                <div class="cell" id="qua-17"></div>
+                <div class="cell" id="qui-17"></div>
+                <div class="cell" id="sex-17"></div>
+                <div class="cell" id="sab-17"></div>
+                <div class="cell" id="dom-17"></div>
+
+
+                <div class="hour">18:00</div>
+                <div class="cell" id="seg-18"></div>
+                <div class="cell" id="ter-18"></div>
+                <div class="cell" id="qua-18"></div>
+                <div class="cell" id="qui-18"></div>
+                <div class="cell" id="sex-18"></div>
+                <div class="cell" id="sab-18"></div>
+                <div class="cell" id="dom-18"></div>
+
+
+                <div class="hour">19:00</div>
+                <div class="cell" id="seg-19"></div>
+                <div class="cell" id="ter-19"></div>
+                <div class="cell" id="qua-19"></div>
+                <div class="cell" id="qui-19"></div>
+                <div class="cell" id="sex-19"></div>
+                <div class="cell" id="sab-19"></div>
+                <div class="cell" id="dom-19"></div>
+
+
+                <div class="hour">20:00</div>
+                <div class="cell" id="seg-20"></div>
+                <div class="cell" id="ter-20"></div>
+                <div class="cell" id="qua-20"></div>
+                <div class="cell" id="qui-20"></div>
+                <div class="cell" id="sex-20"></div>
+                <div class="cell" id="sab-20"></div>
+                <div class="cell" id="dom-20"></div>
+
+
+                <div class="hour">21:00</div>
+                <div class="cell" id="seg-21"></div>
+                <div class="cell" id="ter-21"></div>
+                <div class="cell" id="qua-21"></div>
+                <div class="cell" id="qui-21"></div>
+                <div class="cell" id="sex-21"></div>
+                <div class="cell" id="sab-21"></div>
+                <div class="cell" id="dom-21"></div>
+
+
+                <div class="hour">22:00</div>
+                <div class="cell" id="seg-22"></div>
+                <div class="cell" id="ter-22"></div>
+                <div class="cell" id="qua-22"></div>
+                <div class="cell" id="qui-22"></div>
+                <div class="cell" id="sex-22"></div>
+                <div class="cell" id="sab-22"></div>
+                <div class="cell" id="dom-22"></div>
+
+
+                <div class="hour">23:00</div>
+                <div class="cell" id="seg-23"></div>
+                <div class="cell" id="ter-23"></div>
+                <div class="cell" id="qua-23"></div>
+                <div class="cell" id="qui-23"></div>
+                <div class="cell" id="sex-23"></div>
+                <div class="cell" id="sab-23"></div>
+                <div class="cell" id="dom-23"></div>
+
+
+                <div class="hour">00:00</div>
+                <div class="cell" id="seg-00"></div>
+                <div class="cell" id="ter-00"></div>
+                <div class="cell" id="qua-00"></div>
+                <div class="cell" id="qui-00"></div>
+                <div class="cell" id="sex-00"></div>
+                <div class="cell" id="sab-00"></div>
+                <div class="cell" id="dom-00"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>TaskHub</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-primary-custom">
+        <div class="container-fluid">
+
+            <h1 class="title">TaskHub</h1>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="div-login">
+
+        <div class="card login-card" style="width: 22rem;">
+
+            <div class="card-body">
+
+                <h5 class="card-title text-center mb-4">
+                    Olá, Bem vindo a TaskHub! <br>
+                    Cadastre-se e comece sua jornada!
+                </h5>
+
+                <div class="mb-3">
+                    <label class="form-label">Seu Nome</label>
+                    <input type="text" id="Nome" class="form-control" placeholder="Digite seu Nome">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Idade</label>
+                    <input type="number" id="idade" class="form-control" placeholder="Digite sua Idade">
+                </div>
+
+                <button class="btn btn-primary w-100 mb-2" onclick="confirmar()">
+                    Confirmar
+                </button>
+
+                <a href="../Home/home.html" class="btn btn-success w-100  btn-continuar" id="btn">
+                    Continuar Para Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="style.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

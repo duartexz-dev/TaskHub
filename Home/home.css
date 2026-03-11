@@ -1,0 +1,605 @@
+:root {
+  --primary: #000328;
+  --secondary: #050a4a;
+  --accent: #3f51b5;
+  --highlight: #5c6bff;
+  --text: #f5f7ff;
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+/* FUNDO */
+
+.bg-primary-custom {
+  background-color: var(--primary);
+}
+
+.title {
+  color: var(--text);
+  margin: 10px;
+}
+
+.navbar .nav-link {
+  color: var(--text);
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.navbar .nav-link:hover {
+  color: var(--highlight);
+}
+
+.dropdown-menu {
+  background-color: var(--secondary);
+  border: none;
+}
+
+.dropdown-item {
+  color: var(--text);
+}
+
+.dropdown-item:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* BODY */
+
+body {
+  margin: 0;
+
+  background: linear-gradient(135deg, #000328, #020637, #050a4a);
+  background-size: 400% 400%;
+  animation: bgMove 15s ease infinite;
+
+  min-height: 100vh;
+
+  color: white;
+
+  font-family: Segoe UI;
+
+  overflow-x: hidden;
+}
+
+/* container animação */
+
+.container .card {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+
+  transform: scale(0.95);
+
+  opacity: 0;
+
+  animation: cardEnter 0.8s ease forwards;
+}
+
+/* delay entre cards */
+
+.container .card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+/* hover aproximando */
+
+.container .card:hover {
+  transform: scale(1.07);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(92, 107, 255, 0.5);
+}
+
+/* imagem suave */
+
+.card img {
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* glass no header e lista */
+
+.card-header,
+.list-group-item {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: none;
+}
+
+/* animação entrada */
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+
+    transform: translateY(40px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* efeito luz seguindo mouse */
+
+.light {
+  position: fixed;
+
+  width: 400px;
+
+  height: 400px;
+
+  background: radial-gradient(
+    circle,
+    rgba(92, 107, 255, 0.35),
+    transparent 70%
+  );
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  mix-blend-mode: screen;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 0;
+}
+
+/* container */
+
+.task-calendar {
+  position: relative;
+
+  z-index: 1;
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* caixa adicionar tarefa */
+
+.addBox {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+
+  flex-wrap: wrap;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* inputs */
+
+.calendar-input {
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+.calendar-input:focus {
+  border: 1px solid var(--highlight);
+
+  box-shadow: 0 0 10px rgba(92, 107, 255, 0.6);
+
+  transform: scale(1.02);
+}
+
+/* botão */
+
+.calendar-btn {
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+
+  border: none;
+
+  margin: 20px;
+
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.calendar-btn:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 0 12px rgba(92, 107, 255, 0.8);
+}
+
+/* efeito luz botão */
+
+.calendar-btn::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120%;
+  height: 120%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  left: -120%;
+
+  top: 0;
+
+  transition: 0.6s;
+}
+
+.calendar-btn:hover::before {
+  left: 120%;
+}
+
+/* calendario */
+
+.calendar {
+  width: 100%;
+
+  max-width: 1100px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(18px);
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+
+  animation: fadeUp 0.6s ease;
+}
+
+/* header */
+
+.header {
+  display: grid;
+
+  grid-template-columns: 120px repeat(7, 1fr);
+
+  text-align: center;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+/* grid */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 120px repeat(7, 1fr);
+
+  gap: 6px;
+}
+
+/* hora */
+
+.hour {
+  background: rgba(255, 255, 255, 0.06);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 6px;
+}
+
+/* celula */
+
+.cell {
+  min-height: 60px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border-radius: 6px;
+
+  padding: 5px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.cell:hover {
+  background: rgba(63, 81, 181, 0.35);
+
+  transform: scale(1.05);
+
+  box-shadow: 0 0 18px rgba(92, 107, 255, 0.5);
+}
+
+/* tarefa */
+
+.task {
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+
+  padding: 4px 6px;
+
+  margin-top: 3px;
+
+  border-radius: 5px;
+
+  font-size: 12px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  animation: fadeIn 0.2s;
+}
+
+.task button {
+  background: none;
+
+  border: none;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+/* animações */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* esconder horas */
+
+.hidden-hours {
+  display: none;
+}
+
+/* botão resumo */
+
+.summary-btn {
+  cursor: pointer;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+
+  color: white;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  font-size: 18px;
+
+  margin-bottom: 15px;
+
+  transition: 0.3s;
+}
+
+.summary-btn:hover {
+  transform: scale(1.03);
+
+  box-shadow: 0 0 12px var(--highlight);
+}
+
+/* seleção de dias */
+
+.days-select {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 10px;
+}
+
+.day-btn {
+  flex: 1;
+
+  min-width: 60px;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.day-btn:hover {
+  background: var(--accent);
+
+  box-shadow: 0 0 8px var(--highlight);
+}
+
+/* seleção de horas */
+
+.hours-select {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin: 10px 0;
+}
+
+.hour-btn {
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: 0.25s;
+}
+
+.hour-btn:hover {
+  background: var(--accent);
+
+  box-shadow: 0 0 8px var(--highlight);
+}
+
+/* botão grande */
+
+.big-btn {
+  margin-top: 10px;
+
+  width: 100%;
+
+  font-size: 16px;
+
+  padding: 12px;
+}
+
+/* criar tarefa */
+
+.task-create {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.calendar-label {
+  color: var(--text);
+
+  font-weight: bold;
+
+  margin-bottom: 6px;
+
+  font-size: 14px;
+}
+
+.input-help {
+  font-size: 12px;
+
+  opacity: 0.7;
+
+  margin-top: 4px;
+
+  color: #cfd6ff;
+}

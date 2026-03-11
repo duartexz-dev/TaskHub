@@ -1,0 +1,115 @@
+:root {
+  --primary: #000328;
+  --secondary: #050a4a;
+  --accent: #3f51b5;
+  --highlight: #5c6bff;
+  --text: #f5f7ff;
+}
+
+.bg-primary-custom {
+  background-color: var(--primary);
+}
+
+.title {
+  color: var(--text);
+  margin: 10;
+}
+
+.navbar .nav-link {
+  color: var(--text);
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.navbar .nav-link:hover {
+  color: var(--highlight);
+}
+
+.dropdown-menu {
+  background-color: var(--secondary);
+  border: none;
+}
+
+.dropdown-item {
+  color: var(--text);
+}
+
+.dropdown-item:hover {
+  background-color: var(--accent);
+  color: white;
+}
+body {
+  background: linear-gradient(to left, #000328, #020637);
+  align-items: center;
+  height: 100vh;
+}
+.div-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.login-card {
+  width: 22rem;
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  color: white;
+  padding: 25px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+  animation: slideIn 0.8s ease;
+}
+
+/* luz passando */
+
+.login-card::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+/* hover effect */
+
+.login-card:hover::before {
+  left: 120%;
+}
+
+/* animação de entrada */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.btn-continuar {
+  visibility: hidden;
+}
