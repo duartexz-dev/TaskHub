@@ -393,6 +393,10 @@
                 width: 100%;
                 overflow-x: auto;
                 padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
             }
 
             /* HEADER */
@@ -453,7 +457,24 @@
                 background: rgba(0, 0, 0, 0.4);
                 border-radius: 10px;
             }
+
+            /* HEADER */
+            .header {
+                display: grid;
+                grid-template-columns: 90px repeat(7, 90px);
+                min-width: 720px;
+            }
+
+            .header-cell {
+                padding: 10px;
+                font-weight: bold;
+                text-align: center;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                background: rgba(255, 255, 255, 0.08);
+            }
         </style>
+
+
 
 
         <script src="home.js"></script>

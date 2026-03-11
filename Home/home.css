@@ -603,3 +603,19 @@ body {
 
   color: #cfd6ff;
 }
+.div-alert {
+  display: flex;
+  justify-content: center;
+}
+.alerts {
+  margin: 20px;
+  transition: 1s;
+  animation: cardEnter 0.8s ease forwards;
+}
+.alerts:hover {
+  background: rgba(63, 81, 181, 0.35);
+
+  transform: scale(1.05);
+
+  box-shadow: 0 0 18px rgba(92, 107, 255, 0.5);
+}
