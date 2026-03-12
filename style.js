@@ -20,6 +20,7 @@ function confirmar() {
     } else if (idade < 18) {
 
         alert("Dados Confirmados coleguinha!")
+
     } else {
 
         alert("Dados Inválidos!!!!")
