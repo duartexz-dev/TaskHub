@@ -28,7 +28,7 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="Module-planos/">Planos</a>
+                        <a class="nav-link" href="#planos">Planos</a>
                     </li>
 
                     <li class="nav-item">
@@ -88,399 +88,156 @@
 
     </div>
 
-    <div class="task-calendar">
 
-        <h2 class="title">Plano semanal!</h2>
-        <details class="task-create glass slide-top">
+    <div id="carouselExample" class="carousel slide carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.mUKpJy6kJAlT0yU5CYVBTgHaE6?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.freepik.com/fotos-gratis/homem-e-mulher-correndo-na-vista-lateral-da-pista_23-2149731293.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.freepik.com/fotos-gratis/estudante-afro-americano-elegante-digitando-no-computador-laptop-enquanto-esta-sentado-a-mesa-do-cafe-com-livros-didaticos-trabalhando-na-licao-de-casa-tendo-focado-o-olhar-concentrado-pessoas-tecnologia-moderna-e-educacao_273609-7537.jpg?size=626&ext=jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> <br><br><br>
 
-            <summary class="summary-btn">
-                Criar nova tarefa
-            </summary>
+    <h1 class="title"
+        style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 45px; border-bottom: solid; display: flex; justify-content: center; align-items: center;"
+        id="planos">Planos</h1>
 
-            <div class="task-form">
+    <div class="container py-5">
+        <div class="row g-4 justify-content-center text-center">
 
-                <!-- NOME -->
+            <!-- CARD 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card bg-primary-custom text-white h-100 shadow-lg border-0">
+                    <img src="../images/img-runners.jpeg" class="card-img-top" alt="Runner">
 
-                <div class="form-group slide-left">
+                    <div class="card-body d-flex flex-column">
+                        <div class="descricao-plano">
 
-                    <label class="calendar-label">
-                        Nome da tarefa
-                    </label>
+                            <p>
+                                O <span class="destaque-plano">Plano Semanal</span> ajuda você a organizar
+                                suas <span class="destaque-eventos">tarefas do dia a dia</span> de forma clara e
+                                prática.
+                            </p>
 
-                    <input type="text" id="taskName" class="calendar-input" placeholder="Ex: Estudar JavaScript" />
+                            <p>
+                                Nele você pode definir horários, registrar compromissos e usar um
+                                <span class="destaque-checklist">checklist semanal</span>
+                                para acompanhar tudo o que precisa ser feito.
+                            </p>
 
-                    <small class="input-help">
-                        Digite o nome da tarefa que aparecerá no calendário.
-                    </small>
+                            <p>
+                                Ideal para quem deseja manter
+                                <span class="destaque-compartilhar">rotina produtiva e bem planejada</span>
+                                durante toda a semana.
+                            </p>
 
+                        </div>
+
+                        <a href="/Modulo-planos/homeS.html" class="btn btn-success mt-auto">
+                            Ver Plano
+                        </a>
+                    </div>
                 </div>
-
-
-                <!-- DIA -->
-
-                <div class="form-group slide-right">
-
-                    <label class="calendar-label">
-                        Dia da semana
-                    </label>
-
-                    <input type="text" id="taskDay" class="calendar-input" placeholder="Ex: segunda-feira" />
-
-                    <small class="input-help">
-                        Digite o dia completo: segunda-feira, terça-feira, etc.
-                    </small>
-
-                </div>
-
-
-                <!-- HORÁRIO -->
-
-                <div class="form-group slide-left">
-
-                    <label class="calendar-label">
-                        Horário da tarefa
-                    </label>
-
-                    <input type="time" id="taskHour" class="calendar-input" min="04:00" max="23:59" step="3600" />
-
-                    <small class="input-help">
-                        Escolha o horário em que a tarefa deve aparecer no calendário.
-                    </small>
-
-                </div>
-
-
-                <!-- BOTÃO -->
-
-                <button class="calendar-btn big-btn slide-bottom" id="confirmTask" onclick="confirmtask()">
-
-                    Confirmar tarefa
-
-                </button>
-
             </div>
 
-        </details>
+            <!-- CARD 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card bg-primary-custom text-white h-100 shadow-lg border-0">
+                    <img src="https://www.thoughtco.com/thmb/e2z3O8I2sYJctP8uBt1TwEgnQzQ=/2122x1415/filters:fill(auto,1)/Studying-56a945f83df78cf772a55e31.jpg"
+                        class="card-img-top" alt="Runner">
+
+                    <div class="card-body d-flex flex-column">
+
+                        <div class="descricao-plano">
+
+                            <p>
+                                O <span class="destaque-plano">Plano Mensal</span> é ideal para organizar
+                                suas <span class="destaque-eventos">metas do mês</span>,
+                                compromissos importantes e atividades recorrentes.
+                            </p>
+
+                            <p>
+                                Com ele, você pode acompanhar suas tarefas através de um
+                                <span class="destaque-checklist">checklist mensal</span>,
+                                garantindo que nenhum objetivo fique para trás.
+                            </p>
+
+                            <p>
+                                Planeje melhor seu tempo, organize suas prioridades e
+                                <span class="destaque-compartilhar">acompanhe sua evolução a cada mês</span>.
+                            </p>
+
+                        </div>
 
 
-
-
-
-        <div class="calendar">
-
-            <div class="header d-flex flex-nowrap text-center">
-                <div class="header-cell flex-shrink-0">Hora</div>
-                <div class="header-cell flex-shrink-0">Seg</div>
-                <div class="header-cell flex-shrink-0">Ter</div>
-                <div class="header-cell flex-shrink-0">Qua</div>
-                <div class="header-cell flex-shrink-0">Qui</div>
-                <div class="header-cell flex-shrink-0">Sex</div>
-                <div class="header-cell flex-shrink-0">Sab</div>
-                <div class="header-cell flex-shrink-0">Dom</div>
+                        <a href="/Modulo-planos/homeM.html" class="btn btn-success mt-auto">
+                            Ver Plano
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid">
-                <!-- 04:00 até 12:00 -->
-                <div class="hour">04:00</div>
-                <div class="cell" id="seg-04"></div>
-                <div class="cell" id="ter-04"></div>
-                <div class="cell" id="qua-04"></div>
-                <div class="cell" id="qui-04"></div>
-                <div class="cell" id="sex-04"></div>
-                <div class="cell" id="sab-04"></div>
-                <div class="cell" id="dom-04"></div>
+            <!-- CARD 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card bg-primary-custom text-white h-100 shadow-lg border-0">
+                    <img src="../images/img-runner.jpg" class="card-img-top" alt="Runner">
 
-                <div class="hour">05:00</div>
-                <div class="cell" id="seg-05"></div>
-                <div class="cell" id="ter-05"></div>
-                <div class="cell" id="qua-05"></div>
-                <div class="cell" id="qui-05"></div>
-                <div class="cell" id="sex-05"></div>
-                <div class="cell" id="sab-05"></div>
-                <div class="cell" id="dom-05"></div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="descricao-plano">
 
-                <div class="hour">06:00</div>
-                <div class="cell" id="seg-06"></div>
-                <div class="cell" id="ter-06"></div>
-                <div class="cell" id="qua-06"></div>
-                <div class="cell" id="qui-06"></div>
-                <div class="cell" id="sex-06"></div>
-                <div class="cell" id="sab-06"></div>
-                <div class="cell" id="dom-06"></div>
+                            <p>
+                                O <span class="destaque-plano">Plano Anual</span> foi criado para organizar
+                                <span class="destaque-eventos">eventos importantes</span>,
+                                <span class="destaque-eventos">datas especiais</span> e todos os momentos
+                                que fazem parte do seu ano.
+                            </p>
 
-                <div class="hour">07:00</div>
-                <div class="cell" id="seg-07"></div>
-                <div class="cell" id="ter-07"></div>
-                <div class="cell" id="qua-07"></div>
-                <div class="cell" id="qui-07"></div>
-                <div class="cell" id="sex-07"></div>
-                <div class="cell" id="sab-07"></div>
-                <div class="cell" id="dom-07"></div>
+                            <p>
+                                Com ele, você pode acompanhar seu progresso através de um
+                                <span class="destaque-checklist">checklist inteligente</span>,
+                                ajudando a medir sua evolução durante todo o ano.
+                            </p>
 
-                <div class="hour">08:00</div>
-                <div class="cell" id="seg-08"></div>
-                <div class="cell" id="ter-08"></div>
-                <div class="cell" id="qua-08"></div>
-                <div class="cell" id="qui-08"></div>
-                <div class="cell" id="sex-08"></div>
-                <div class="cell" id="sab-08"></div>
-                <div class="cell" id="dom-08"></div>
+                            <p>
+                                Além disso, é possível
+                                <span class="destaque-compartilhar">compartilhar sua rotina</span>
+                                com outras pessoas e manter sua organização sempre atualizada.
+                            </p>
 
-                <div class="hour">09:00</div>
-                <div class="cell" id="seg-09"></div>
-                <div class="cell" id="ter-09"></div>
-                <div class="cell" id="qua-09"></div>
-                <div class="cell" id="qui-09"></div>
-                <div class="cell" id="sex-09"></div>
-                <div class="cell" id="sab-09"></div>
-                <div class="cell" id="dom-09"></div>
+                        </div>
 
-                <div class="hour">10:00</div>
-                <div class="cell" id="seg-10"></div>
-                <div class="cell" id="ter-10"></div>
-                <div class="cell" id="qua-10"></div>
-                <div class="cell" id="qui-10"></div>
-                <div class="cell" id="sex-10"></div>
-                <div class="cell" id="sab-10"></div>
-                <div class="cell" id="dom-10"></div>
 
-                <div class="hour">11:00</div>
-                <div class="cell" id="seg-11"></div>
-                <div class="cell" id="ter-11"></div>
-                <div class="cell" id="qua-11"></div>
-                <div class="cell" id="qui-11"></div>
-                <div class="cell" id="sex-11"></div>
-                <div class="cell" id="sab-11"></div>
-                <div class="cell" id="dom-11"></div>
-
-                <div class="hour">12:00</div>
-                <div class="cell" id="seg-12"></div>
-                <div class="cell" id="ter-12"></div>
-                <div class="cell" id="qua-12"></div>
-                <div class="cell" id="qui-12"></div>
-                <div class="cell" id="sex-12"></div>
-                <div class="cell" id="sab-12"></div>
-                <div class="cell" id="dom-12"></div>
-            </div>
-
-            <button id="Open" class="calendar-btn" onclick="Abrir()">Mostrar mais horários</button>
-            <button id="Ocult" class="calendar-btn" onclick="ocultar()">Mostrar menos horários</button>
-
-            <div class="grid hidden-hours" id="cardOcultar">
-                <!-- 13:00 até 00:00 -->
-                <div class="hour">13:00</div>
-                <div class="cell" id="seg-13"></div>
-                <div class="cell" id="ter-13"></div>
-                <div class="cell" id="qua-13"></div>
-                <div class="cell" id="qui-13"></div>
-                <div class="cell" id="sex-13"></div>
-                <div class="cell" id="sab-13"></div>
-                <div class="cell" id="dom-13"></div>
-
-                <div class="hour">14:00</div>
-                <div class="cell" id="seg-14"></div>
-                <div class="cell" id="ter-14"></div>
-                <div class="cell" id="qua-14"></div>
-                <div class="cell" id="qui-14"></div>
-                <div class="cell" id="sex-14"></div>
-                <div class="cell" id="sab-14"></div>
-                <div class="cell" id="dom-14"></div>
-
-                <div class="hour">15:00</div>
-                <div class="cell" id="seg-15"></div>
-                <div class="cell" id="ter-15"></div>
-                <div class="cell" id="qua-15"></div>
-                <div class="cell" id="qui-15"></div>
-                <div class="cell" id="sex-15"></div>
-                <div class="cell" id="sab-15"></div>
-                <div class="cell" id="dom-15"></div>
-
-                <div class="hour">16:00</div>
-                <div class="cell" id="seg-16"></div>
-                <div class="cell" id="ter-16"></div>
-                <div class="cell" id="qua-16"></div>
-                <div class="cell" id="qui-16"></div>
-                <div class="cell" id="sex-16"></div>
-                <div class="cell" id="sab-16"></div>
-                <div class="cell" id="dom-16"></div>
-
-                <div class="hour">17:00</div>
-                <div class="cell" id="seg-17"></div>
-                <div class="cell" id="ter-17"></div>
-                <div class="cell" id="qua-17"></div>
-                <div class="cell" id="qui-17"></div>
-                <div class="cell" id="sex-17"></div>
-                <div class="cell" id="sab-17"></div>
-                <div class="cell" id="dom-17"></div>
-
-                <div class="hour">18:00</div>
-                <div class="cell" id="seg-18"></div>
-                <div class="cell" id="ter-18"></div>
-                <div class="cell" id="qua-18"></div>
-                <div class="cell" id="qui-18"></div>
-                <div class="cell" id="sex-18"></div>
-                <div class="cell" id="sab-18"></div>
-                <div class="cell" id="dom-18"></div>
-
-                <div class="hour">19:00</div>
-                <div class="cell" id="seg-19"></div>
-                <div class="cell" id="ter-19"></div>
-                <div class="cell" id="qua-19"></div>
-                <div class="cell" id="qui-19"></div>
-                <div class="cell" id="sex-19"></div>
-                <div class="cell" id="sab-19"></div>
-                <div class="cell" id="dom-19"></div>
-
-                <div class="hour">20:00</div>
-                <div class="cell" id="seg-20"></div>
-                <div class="cell" id="ter-20"></div>
-                <div class="cell" id="qua-20"></div>
-                <div class="cell" id="qui-20"></div>
-                <div class="cell" id="sex-20"></div>
-                <div class="cell" id="sab-20"></div>
-                <div class="cell" id="dom-20"></div>
-
-                <div class="hour">21:00</div>
-                <div class="cell" id="seg-21"></div>
-                <div class="cell" id="ter-21"></div>
-                <div class="cell" id="qua-21"></div>
-                <div class="cell" id="qui-21"></div>
-                <div class="cell" id="sex-21"></div>
-                <div class="cell" id="sab-21"></div>
-                <div class="cell" id="dom-21"></div>
-
-                <div class="hour">22:00</div>
-                <div class="cell" id="seg-22"></div>
-                <div class="cell" id="ter-22"></div>
-                <div class="cell" id="qua-22"></div>
-                <div class="cell" id="qui-22"></div>
-                <div class="cell" id="sex-22"></div>
-                <div class="cell" id="sab-22"></div>
-                <div class="cell" id="dom-22"></div>
-
-                <div class="hour">23:00</div>
-                <div class="cell" id="seg-23"></div>
-                <div class="cell" id="ter-23"></div>
-                <div class="cell" id="qua-23"></div>
-                <div class="cell" id="qui-23"></div>
-                <div class="cell" id="sex-23"></div>
-                <div class="cell" id="sab-23"></div>
-                <div class="cell" id="dom-23"></div>
-
-                <div class="hour">00:00</div>
-                <div class="cell" id="seg-00"></div>
-                <div class="cell" id="ter-00"></div>
-                <div class="cell" id="qua-00"></div>
-                <div class="cell" id="qui-00"></div>
-                <div class="cell" id="sex-00"></div>
-                <div class="cell" id="sab-00"></div>
-                <div class="cell" id="dom-00"></div>
+                        <a href="/Modulo-planos/homeA.html" class="btn btn-success mt-auto">
+                            Ver Plano Anual
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </div>
+    </div>
 
 
-
-
-
-
-
-
-
-        <style>
-            /* CONTAINER DO CALENDARIO */
-            .calendar {
-                width: 100%;
-                overflow-x: auto;
-                padding: 10px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-            }
-
-            /* HEADER */
-            .header {
-                min-width: 720px;
-            }
-
-            .header-cell {
-                min-width: 90px;
-                padding: 10px;
-                font-weight: bold;
-                border: 1px solid rgba(255, 255, 255, 0.15);
-                background: rgba(255, 255, 255, 0.08);
-            }
-
-            /* GRID */
-            .grid {
-                display: grid;
-                grid-template-columns: 90px repeat(7, 90px);
-                gap: 4px;
-                min-width: 720px;
-            }
-
-            /* HORAS */
-            .hour {
-                text-align: center;
-                font-weight: bold;
-                padding: 8px;
-                border-radius: 6px;
-                background: rgba(120, 150, 255, 0.25);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-            }
-
-            /* CELULAS */
-            .cell {
-                height: 55px;
-                border-radius: 6px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                background: rgba(255, 255, 255, 0.05);
-                transition: 0.25s;
-            }
-
-            .cell:hover {
-                background: rgba(255, 255, 255, 0.15);
-            }
-
-            /* BOTÕES */
-            .calendar-btn {
-                margin-top: 10px;
-            }
-
-            /* SCROLL BONITO */
-            .calendar::-webkit-scrollbar {
-                height: 6px;
-            }
-
-            .calendar::-webkit-scrollbar-thumb {
-                background: rgba(0, 0, 0, 0.4);
-                border-radius: 10px;
-            }
-
-            /* HEADER */
-            .header {
-                display: grid;
-                grid-template-columns: 90px repeat(7, 90px);
-                min-width: 720px;
-            }
-
-            .header-cell {
-                padding: 10px;
-                font-weight: bold;
-                text-align: center;
-                border: 1px solid rgba(255, 255, 255, 0.15);
-                background: rgba(255, 255, 255, 0.08);
-            }
-        </style>
-
-
-
-
-        <script src="home.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+    <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
