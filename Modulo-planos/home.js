@@ -7,7 +7,7 @@ function Abrir() {
     cardOcult.style.display = "grid"
 }
 
-console.log("hello world")
+
 
 
 function confirmtask() {
