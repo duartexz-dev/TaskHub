@@ -4,6 +4,7 @@ function confirmar() {
     let idade = Number(document.getElementById("idade").value)
     let btn = document.getElementById("btn")
 
+
     if (nome && idade >= 18 && idade <= 60) {
 
         btn.style.visibility = "visible"
@@ -27,4 +28,11 @@ function confirmar() {
 
     }
 
+    localStorage.setItem("nome", nome)
+    localStorage.setItem("idade", idade)
+
+
+
 }
+
+
