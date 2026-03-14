@@ -101,16 +101,16 @@
 
     </div>
 
-    <div class="task-calendar">
+    <div class="task-calendar ">
 
         <h2 class="title">Plano semanal!</h2>
-        <details class="task-create glass slide-top">
+        <details class="task-create glass slide-top ">
 
             <summary class="summary-btn">
                 Criar nova tarefa
             </summary>
 
-            <div class="task-form">
+            <div class="task-form ">
 
                 <!-- NOME -->
 
@@ -165,7 +165,7 @@
 
                 <!-- BOTÃO -->
 
-                <button class="calendar-btn big-btn slide-bottom" id="confirmTask" onclick="confirmtask()">
+                <button class=" big-btn slide-bottom calendar-btn" id="confirmTask" onclick="confirmtask()">
 
                     Confirmar tarefa
 
@@ -397,20 +397,77 @@
 
 
 
+        <div class="div-alert">
+            <div class="alert alerts bg-primary-custom" role="alert">
+
+                <p>
+                    Abaixo nós também temos um sistema de progresso ! <br>
+                    com base no seu chacklist ! marque as tarefas feitas abaixo <br>
+                    e veja seu progresso aumentar!
+                </p>
+
+            </div> <br><br>
+
+        </div>
 
 
 
 
-        <style>
+        <div class="container container-main">
 
-        </style>
+            <h2 class="text-center mb-4">
+                Planner de Tarefas
+            </h2>
 
 
-        <script src="home.js"></script>
+            <!-- BARRA DE PROGRESSO -->
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+            <div class="glass mb-4 bg-primary-custom">
+
+                <h5>Progresso da Semana</h5>
+
+                <div class="progress ">
+
+                    <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                        style="width:0%">
+                        0%
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="checklist-container fade-in">
+
+                <div class="checklist-card glass-card">
+
+                    <h2 class="checklist-title">
+                        Checklist de Tarefas
+                    </h2>
+
+                    <!-- Área onde o JavaScript irá adicionar as tarefas -->
+
+                    <div id="taskList" class="task-list">
+
+                        <!-- Exemplo de estrutura que o JS irá criar -->
+
+
+                        <div class="task-item" id="lista-tasks">
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <script src="home.js"></script>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                    crossorigin="anonymous"></script>
 
 </body>
 

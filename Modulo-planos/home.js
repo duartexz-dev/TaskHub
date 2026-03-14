@@ -12,10 +12,53 @@ function Abrir() {
 
 function confirmtask() {
 
-
+    let list = document.getElementById("lista-tasks")
     let name = document.getElementById("taskName").value
     let dia = document.getElementById("taskDay").value
     let hora = document.getElementById("taskHour").value
+
+    let ids = [
+
+        { task: "AleatoryName", id: ids.lenght + 1 }
+
+    ]
+
+
+
+    if (name && dia && hora) {
+
+        list.innerHTML += `         <span class="task-name">
+                                    ${name} 
+                                </span>
+
+                                     <span class="task-name">
+                              Dia:  ${dia} 
+                                </span>
+
+                                      <span class="task-name">
+                              Horário:  ${hora} 
+                                </span>
+
+                                <div class="task-actions">
+
+                                    <button class="task-done">
+                                        ✅
+                                    </button>
+
+                                    <button class="task-undone">
+                                        ❌
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <br> <br>
+`
+
+
+    }
+
 
 
     //Biblioteca IF/ELSE com CHATGPT//
@@ -478,4 +521,9 @@ function confirmtask() {
     else if (dia == "domingo" && hora == "00:00") {
         document.getElementById("dom-00").innerHTML = name
     }
+
+
+
+
+
 }
